@@ -18,15 +18,20 @@
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .home div {
+        height: 30vh;  /* Adjust size for smaller screens */
+        width: 30vh;
+    }
+}
+
 .home h2 {
-    color: white;
-    margin-left: 15%;
-    margin-bottom: 20%;
+    margin-left: 0;  /* Centered on mobile */
+    font-size: 2rem;
 }
 
 .home h4 {
-    color: white;
-    margin-right: 5%;
-    margin-top: 15%;
-
+    margin-top: 10%;
+    margin-right: 0;
+    font-size: 1.2rem;
 }
