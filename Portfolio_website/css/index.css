@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    background-position: center;
+    background-size: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    overflow: hidden;
+}
+li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    color: white;
+    margin-bottom: 90%;
+}

@@ -1,0 +1,12 @@
+header {
+    height: 20px;
+    width: 80px;
+}
+
+#header_logo {
+    background-image: url("../images/download2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 100px;
+}
