@@ -2,7 +2,7 @@
     display: flex; /* Enables flexbox to place items side by side */
     align-items: center; /* Aligns items vertically in the center */
     margin-top: 8%;
-    gap: 0px; /* Adds space between the div and the h1 */
+    gap: 15px; /* Adds space between the div and the h1 */
 }
 
 .home div {
@@ -18,20 +18,16 @@
     overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    .home div {
-        height: 30vh;  /* Adjust size for smaller screens */
-        width: 30vh;
-    }
-}
-
 .home h2 {
-    margin-left: 0;  /* Centered on mobile */
+    margin-top: auto;
+    margin-left: 10%;  /* Centered on mobile */
     font-size: 2rem;
+    color: white;
 }
 
 .home h4 {
-    margin-top: 10%;
+    margin-top: -12%;
     margin-right: 0;
     font-size: 1.2rem;
+    color: white;
 }
