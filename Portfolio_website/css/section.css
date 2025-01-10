@@ -12,15 +12,15 @@
     background-position: center;
     background-repeat: no-repeat;
     /*margin-left: 5%;*/
-    height: 50vh; 
-    width: 50vh;
+    height: 10cm; 
+    width: 10cm;
     border-radius: 50%;
     overflow: hidden;
 }
 
 .home h2 {
     margin-top: auto;
-    margin-left: 10%;  /* Centered on mobile */
+    margin-left: 5%;  /* Centered on mobile */
     font-size: 2rem;
     color: white;
 }
