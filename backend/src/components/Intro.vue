@@ -4,7 +4,7 @@ import Button from './Button.vue'
 
 <template>
     <section class="intro">
-        <p class="greeting">Hello, i'm</p>
+        <p class="greeting"><span class="arrow">></span> Hello, i'm</p>
         <h1 class="name">Victor Odimmegwa<span class="cursor">|</span></h1>
         <p class="title">Backend Engineer</p>
         <p class="info">
@@ -35,6 +35,12 @@ import Button from './Button.vue'
     margin-bottom: 0.5rem;
     font-weight: 400;
     letter-spacing: 0.5px;
+}
+
+.greeting .arrow {
+    color: #00ff00;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
 }
 
 .name {
@@ -68,9 +74,12 @@ import Button from './Button.vue'
 }
 
 .title {
-    font-size: 1.5rem;
-    color: #6b7280;
+    font-size: 2rem;
     font-weight: 500;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-top: 0.5rem;
     letter-spacing: 1px;
 }
@@ -95,7 +104,8 @@ import Button from './Button.vue'
 @media (max-width: 768px) {
     .intro {
         padding: 2rem 1.5rem;
-        margin-top: 70px;
+        margin-top: 80px;
+        min-height: calc(100vh - 80px);
     }
 
     .greeting {
@@ -103,7 +113,45 @@ import Button from './Button.vue'
     }
 
     .name {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        letter-spacing: -0.5px;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .info {
+        font-size: 1rem;
+        max-width: 100%;
+        line-height: 1.7;
+    }
+
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        padding: 1.5rem 1rem;
+        margin-top: 70px;
+        min-height: calc(100vh - 70px);
+    }
+
+    .greeting {
+        font-size: 0.95rem;
+    }
+
+    .name {
+        font-size: 2rem;
+        letter-spacing: -0.5px;
+    }
+
+    .cursor {
+        font-size: 1.8rem;
     }
 
     .title {
@@ -111,31 +159,12 @@ import Button from './Button.vue'
     }
 
     .info {
-        font-size: 1rem;
-        max-width: 100%;
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .button-group {
-        flex-direction: column;
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .intro {
-        padding: 1.5rem 1rem;
-    }
-
-    .name {
-        font-size: 2.5rem;
-    }
-
-    .title {
-        font-size: 1rem;
-    }
-
-    .info {
-        font-size: 0.95rem;
+        gap: 0.75rem;
     }
 }
 </style>

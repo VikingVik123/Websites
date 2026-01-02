@@ -1,5 +1,15 @@
 <script setup>
+import { ref } from 'vue'
 
+const mobileMenuOpen = ref(false)
+
+const toggleMobileMenu = () => {
+    mobileMenuOpen.value = !mobileMenuOpen.value
+}
+
+const closeMobileMenu = () => {
+    mobileMenuOpen.value = false
+}
 </script>
 
 <template>
@@ -7,10 +17,19 @@
         <div class="name">
             <h1><span class="green">VO</span>_</h1>
         </div>
-        <ul>
-            <li><span class="number">01.</span> <a href="#skills">Skills</a></li>
-            <li><span class="number">02.</span> <a href="#projects">Projects</a></li>
-            <li><span class="number">03.</span> <a href="#contact">Contact</a></li>
+        
+        <!-- Hamburger Button -->
+        <button class="hamburger" :class="{ active: mobileMenuOpen }" @click="toggleMobileMenu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <ul :class="{ 'mobile-open': mobileMenuOpen }">
+            <li><span class="number">01.</span> <a href="#techstack" @click="closeMobileMenu">Skills</a></li>
+            <li><span class="number">02.</span> <a href="#projects" @click="closeMobileMenu">Experience</a></li>
+            <li><span class="number">03.</span> <a href="#contact" @click="closeMobileMenu">Contact</a></li>
         </ul>
     </nav>
 </template>
@@ -93,24 +112,42 @@ ul li a .number {
     font-weight: 600;
 }
 
-ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #00ff00;
-    transition: width 0.3s ease;
-}
-
 ul li a:hover {
     color: #ffffff;
     transform: translateY(-2px);
 }
 
-ul li a:hover::after {
-    width: 100%;
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background: #00ff00;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* Responsive Design */
@@ -123,12 +160,47 @@ ul li a:hover::after {
         font-size: 1.5rem;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     ul {
-        gap: 1.5rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 2rem;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    ul.mobile-open {
+        right: 0;
+    }
+
+    ul li {
+        width: 100%;
+        text-align: center;
     }
 
     ul li a {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
+        padding: 1rem;
+        display: block;
+        width: 100%;
+    }
+
+    ul li a:active {
+        background: rgba(0, 255, 0, 0.1);
+        border-radius: 4px;
     }
 }
 
@@ -138,12 +210,7 @@ ul li a:hover::after {
     }
 
     ul {
-        gap: 1rem;
-    }
-
-    ul li a {
-        font-size: 0.85rem;
-        gap: 0.3rem;
+        width: 80%;
     }
 }
 </style>

@@ -4,8 +4,27 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 255, 0, 0.1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   background-color: black;
   color: white;
   font-family: 'Courier New', Courier, Monaco, monospace;
+  overflow-x: hidden;
+  touch-action: pan-y;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
