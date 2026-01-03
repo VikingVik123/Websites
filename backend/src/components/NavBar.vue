@@ -1,7 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 
 const mobileMenuOpen = ref(false)
+const theme = inject('theme')
+const toggleTheme = inject('toggleTheme')
 
 const toggleMobileMenu = () => {
     mobileMenuOpen.value = !mobileMenuOpen.value
@@ -14,7 +16,7 @@ const closeMobileMenu = () => {
 
 <template>
     <nav class="navbar">
-        <div class="name">
+        <div class="name" @click="toggleTheme" role="button" tabindex="0" @keypress.enter="toggleTheme">
             <h1><span class="green">VO</span>_</h1>
         </div>
         
@@ -40,39 +42,45 @@ const closeMobileMenu = () => {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 3rem;
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
     border-bottom: 2px solid transparent;
-    border-image: linear-gradient(90deg, #4a5568, #2d3748, #4a5568) 1;
+    border-image: linear-gradient(90deg, var(--border-gradient-1), var(--border-gradient-2), var(--border-gradient-1)) 1;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px var(--shadow-color);
     transition: all 0.3s ease;
     font-family: 'Courier New', Courier, Monaco, monospace;
 }
 
 .navbar:hover {
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 6px 30px var(--shadow-color-heavy);
+}
+
+.name {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.name:hover {
+    transform: scale(1.05);
 }
 
 .name h1 {
     font-size: 2rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: 2px;
     transition: all 0.3s ease;
-    cursor: pointer;
+    margin: 0;
 }
 
 .name h1 .green {
-    color: #00ff00;
-}
-
-.name h1:hover {
-    transform: scale(1.05);
+    color: var(--accent-green);
 }
 
 ul {
@@ -91,13 +99,13 @@ ul li {
 }
 
 ul li .number {
-    color: #00ff00;
+    color: var(--accent-green);
     font-weight: 600;
     font-size: 0.9rem;
 }
 
 ul li a {
-    color: #e2e8f0;
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -108,12 +116,12 @@ ul li a {
 }
 
 ul li a .number {
-    color: #00ff00;
+    color: var(--accent-green);
     font-weight: 600;
 }
 
 ul li a:hover {
-    color: #ffffff;
+    color: var(--text-primary);
     transform: translateY(-2px);
 }
 
@@ -133,7 +141,7 @@ ul li a:hover {
 .hamburger span {
     width: 25px;
     height: 2px;
-    background: #00ff00;
+    background: var(--accent-green);
     transition: all 0.3s ease;
     border-radius: 2px;
 }
@@ -171,14 +179,14 @@ ul li a:hover {
         height: 100vh;
         width: 70%;
         max-width: 300px;
-        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-gradient-end) 100%);
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2.5rem;
         padding: 2rem;
         transition: right 0.3s ease;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        box-shadow: -5px 0 20px var(--shadow-color);
         z-index: 1000;
     }
 
@@ -199,7 +207,7 @@ ul li a:hover {
     }
 
     ul li a:active {
-        background: rgba(0, 255, 0, 0.1);
+        background: var(--green-glow-light);
         border-radius: 4px;
     }
 }

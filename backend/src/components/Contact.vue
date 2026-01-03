@@ -44,7 +44,7 @@
 .contact h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: #e2e8f0;
+    color: var(--text-secondary);
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
@@ -53,14 +53,14 @@
 }
 
 .contact h2 .number {
-    color: #00ff00;
+    color: var(--accent-green);
     font-size: 1.5rem;
     font-weight: 600;
 }
 
 .contact p {
     font-size: 1.1rem;
-    color: #9ca3af;
+    color: var(--text-tertiary);
     line-height: 1.8;
     max-width: 600px;
     margin-bottom: 2.5rem;
@@ -77,14 +77,14 @@
 .social-icon {
     width: 60px;
     height: 60px;
-    border: 2px solid #333;
+    border: 2px solid var(--border-primary);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: var(--text-primary);
     transition: all 0.3s ease;
-    background: #000000;
+    background: var(--bg-primary);
     text-decoration: none;
 }
 
@@ -94,11 +94,11 @@
 }
 
 .social-icon:hover {
-    background: #000000;
-    color: #ffffff;
-    border-color: #00ff00;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--accent-green);
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 8px 24px var(--green-glow);
 }
 
 /* Responsive Design */

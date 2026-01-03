@@ -41,7 +41,7 @@
 .projects h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: #e2e8f0;
+    color: var(--text-secondary);
     margin-bottom: 3rem;
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@
 }
 
 .projects h2 .number {
-    color: #00ff00;
+    color: var(--accent-green);
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -63,8 +63,8 @@
 }
 
 .project-item {
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-    border: 2px solid #333;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    border: 2px solid var(--border-primary);
     padding: 2rem;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -76,27 +76,27 @@
 }
 
 .project-item:hover {
-    border-color: #00ff00;
+    border-color: var(--accent-green);
     transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(0, 255, 0, 0.2);
+    box-shadow: 0 12px 32px var(--green-glow);
 }
 
 .project-item h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     margin: 0;
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
 }
 
 .project-item:hover h3 {
-    color: #00ff00;
+    color: var(--accent-green);
 }
 
 .project-item p {
     font-size: 1rem;
-    color: #9ca3af;
+    color: var(--text-tertiary);
     line-height: 1.7;
     margin: 0;
     flex: 1;
@@ -111,8 +111,8 @@
 
 .tag {
     background-color: transparent;
-    border: 1px solid #00ff00;
-    color: #00ff00;
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -147,7 +147,7 @@
 
     .project-item:active {
         transform: scale(0.98);
-        border-color: #10b981;
+        border-color: var(--accent-green-hover);
     }
 }
 

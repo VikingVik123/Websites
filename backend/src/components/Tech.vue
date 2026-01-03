@@ -63,7 +63,7 @@
 .tech h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: #e2e8f0;
+    color: var(--text-secondary);
     margin-bottom: 3rem;
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@
 }
 
 .tech h2 .number {
-    color: #00ff00;
+    color: var(--accent-green);
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -85,23 +85,23 @@
 }
 
 .tech-category {
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-    border: 2px solid #333;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    border: 2px solid var(--border-primary);
     padding: 1.5rem;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .tech-category:hover {
-    border-color: #00ff00;
+    border-color: var(--accent-green);
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 255, 0, 0.15);
+    box-shadow: 0 8px 24px var(--green-glow-light);
 }
 
 .tech-category h3 {
     font-size: 1rem;
     font-weight: 600;
-    color: #00ff00;
+    color: var(--accent-green);
     margin-bottom: 1rem;
     letter-spacing: 1px;
 }
@@ -116,11 +116,11 @@
 }
 
 .tech-category li {
-    background: #0a0a0a;
-    border: 1px solid #2a2a2a;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-secondary);
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
-    color: #9ca3af;
+    color: var(--text-tertiary);
     font-size: 0.9rem;
     transition: all 0.3s ease;
     cursor: default;
@@ -128,9 +128,9 @@
 }
 
 .tech-category li:hover {
-    background: #1a1a1a;
-    border-color: #00ff00;
-    color: #e2e8f0;
+    background: var(--bg-gradient-end);
+    border-color: var(--accent-green);
+    color: var(--text-secondary);
     transform: translateY(-2px);
 }
 

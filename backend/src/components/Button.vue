@@ -68,44 +68,44 @@ defineEmits(['click'])
 
 /* Variants */
 .btn-primary {
-  background-color: #10b981;
-  border-color: #10b981;
-  color: #000000;
+  background-color: var(--accent-green-hover);
+  border-color: var(--accent-green-hover);
+  color: var(--bg-primary);
 }
 
 .btn-primary:hover:not(.btn-disabled) {
-  background-color: #059669;
-  border-color: #059669;
+  background-color: var(--accent-green-dark);
+  border-color: var(--accent-green-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 12px var(--green-glow-strong);
 }
 
 .btn-secondary {
-  background-color: #1a1a1a;
-  border-color: #333333;
-  color: #ffffff;
+  background-color: var(--bg-gradient-end);
+  border-color: var(--border-primary);
+  color: var(--text-primary);
 }
 
 .btn-secondary:hover:not(.btn-disabled) {
-  background-color: #2a2a2a;
-  border-color: #444444;
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-gradient-1);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .btn-outline {
   background-color: transparent;
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: var(--text-primary);
+  color: var(--text-primary);
 }
 
 .btn-outline:hover:not(.btn-disabled) {
   background-color: transparent;
-  border-color: #10b981;
-  color: #ffffff;
+  border-color: var(--accent-green-hover);
+  color: var(--text-primary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-  text-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  box-shadow: 0 4px 12px var(--green-glow);
+  text-shadow: 0 0 8px var(--green-glow);
 }
 
 /* Disabled state */
@@ -123,7 +123,7 @@ defineEmits(['click'])
 
 /* Focus state for accessibility */
 .btn:focus-visible {
-  outline: 2px solid #10b981;
+  outline: 2px solid var(--accent-green-hover);
   outline-offset: 2px;
 }
 

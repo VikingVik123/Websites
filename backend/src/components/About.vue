@@ -29,7 +29,7 @@
 .about h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: #e2e8f0;
+    color: var(--text-secondary);
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
@@ -38,14 +38,14 @@
 }
 
 .about h2 .number {
-    color: #00ff00;
+    color: var(--accent-green);
     font-size: 1.5rem;
     font-weight: 600;
 }
 
 .about p {
     font-size: 1.1rem;
-    color: #9ca3af;
+    color: var(--text-tertiary);
     line-height: 1.8;
     margin-bottom: 1.5rem;
     letter-spacing: 0.3px;

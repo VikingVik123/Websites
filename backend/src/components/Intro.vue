@@ -31,14 +31,14 @@ import Button from './Button.vue'
 
 .greeting {
     font-size: 1.2rem;
-    color: #9ca3af;
+    color: var(--text-tertiary);
     margin-bottom: 0.5rem;
     font-weight: 400;
     letter-spacing: 0.5px;
 }
 
 .greeting .arrow {
-    color: #00ff00;
+    color: var(--accent-green);
     font-size: 0.9rem;
     margin-right: 0.5rem;
 }
@@ -46,7 +46,7 @@ import Button from './Button.vue'
 .name {
     font-size: 4.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -57,8 +57,8 @@ import Button from './Button.vue'
 }
 
 .cursor {
-    color: #00ff00;
-    -webkit-text-fill-color: #00ff00;
+    color: var(--accent-green);
+    -webkit-text-fill-color: var(--accent-green);
     background: none;
     animation: blink 1s step-end infinite;
     margin-left: 0.1rem;
@@ -76,7 +76,7 @@ import Button from './Button.vue'
 .title {
     font-size: 2rem;
     font-weight: 500;
-    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -86,7 +86,7 @@ import Button from './Button.vue'
 
 .info {
     font-size: 1.1rem;
-    color: #9ca3af;
+    color: var(--text-tertiary);
     font-weight: 400;
     line-height: 1.8;
     max-width: 600px;

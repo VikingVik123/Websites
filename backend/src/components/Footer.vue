@@ -10,22 +10,22 @@
 
 <style scoped>
 .footer {
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-    border-top: 2px solid #333;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    border-top: 2px solid var(--border-primary);
     padding: 2rem 3rem;
     text-align: center;
     font-family: 'Courier New', Courier, Monaco, monospace;
 }
 
 .footer p {
-    color: #9ca3af;
+    color: var(--text-tertiary);
     font-size: 0.95rem;
     margin: 0;
     letter-spacing: 0.5px;
 }
 
 .footer .arrow {
-    color: #00ff00;
+    color: var(--accent-green);
     margin-right: 0.5rem;
 }
 
